@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  /* ### Primary */
+
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* ### Neutral */
+
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+
+  /* Weights: 200, 400, 600 */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--Very-Light-Gray);
+}
+
+h1,
+h2 {
+  color: var(--Very-Dark-Blue);
+}
+
+h1 span {
+  font-weight: 200;
+  width: 100%;
+}
+
+p {
+  line-height: 1.8;
+  color: var(--Grayish-Blue);
+}
+
+main {
+  padding: 5rem 1rem;
+}
+
+main > article:first-child {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+main > article:first-child h1 {
+  margin-bottom: 1rem;
+}
+
+main .cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+main .cards article {
+  background-color: #fff;
+  box-shadow: 0 0 16px hsl(180, 62%, 55%, 0.15);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+main .cards article:first-child {
+  border-top: 5px solid var(--Red);
+}
+
+main .cards article:nth-child(2) {
+  border-top: 5px solid var(--Cyan);
+}
+
+main .cards article:nth-child(3) {
+  border-top: 5px solid var(--Orange);
+}
+
+main .cards article:nth-child(4) {
+  border-top: 5px solid var(--Blue);
+}
+
+main .cards article h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+main .cards article p {
+  margin-bottom: 3rem;
+}
+
+main .cards article img {
+  display: block;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  main > article {
+    max-width: 588px;
+    margin: auto;
+  }
+
+  main > article:first-child {
+    font-size: 2rem;
+  }
+
+  main .cards {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main .cards article {
+    /* flex: 1; */
+    width: 300px;
+  }
+
+  main .cards article:nth-child(odd) {
+    transform: translateY(50%);
+  }
+}
